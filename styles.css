@@ -1,0 +1,84 @@
+html, body {
+  margin: 0;
+  padding: 0;
+ 
+}
+.logo {
+  max-width: 180px;
+}
+
+@media (min-width: 992px) {
+  .logo {
+    max-width: 250px;
+  }
+}
+
+.section {
+
+  font-size: 3em;
+  font-family: arial;
+
+  
+}
+
+#formulario{
+    border: 2px solid #4c7eb0;
+    border-radius: 8px;
+}
+
+
+#rowForm{
+  margin-left: 10px;
+  margin-right: 10px;
+  
+  border-radius: 8px;
+
+}
+
+@media (max-width: 768px) {
+  .section {
+    font-size: 1em;
+  }
+  
+  
+}
+
+.navbar-toggler-icon{
+   background-color: rgb(206, 147, 193);
+   border-radius: 5px;
+   margin-right: 5px;
+}
+
+.topbar {
+  height: 85px;
+}
+
+
+.section:nth-of-type(1) {
+  background: linear-gradient(
+    135deg,
+    #5f7f99 0%,
+    #6b8ca8 40%,
+    #8faec4 100%
+  );
+}
+
+.section:nth-of-type(2) .card,
+.section:nth-of-type(2) #rowForm {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(107,140,168,0.35);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+  border-radius: 16px;
+}
+
+
+.section:nth-of-type(2) .btn-primary{
+  background-color: #6B8CA8;
+  border-color: #6B8CA8;
+}
+
+.section:nth-of-type(2) .btn-primary:hover{
+  background-color: #4A647C;
+  border-color: #4A647C;
+}
