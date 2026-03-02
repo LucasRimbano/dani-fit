@@ -241,3 +241,19 @@ html, body { margin:0; padding:0; }
 
 }
 
+
+
+.scale-up-center {
+  animation: scale-up-center 0.5s ease-out both;
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

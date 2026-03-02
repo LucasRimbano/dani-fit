@@ -5,8 +5,23 @@ new fullpage('#fullpage', {
 
   fixedElements: '.topbar, footer',
   paddingTop: '70px',
-  paddingBottom: '120px' // ajustalo al alto del footer en móvil
- 
+  paddingBottom: '120px', // ajustalo al alto del footer en móvil
+
+  
+  afterLoad: function(origin, destination, direction) {
+
+    const cards = destination.item.querySelectorAll('.anim-card');
+
+    cards.forEach((card, index) => {
+      card.classList.remove('scale-up-center');
+      void card.offsetWidth; // reinicia animación
+      setTimeout(() => {
+        card.classList.add('scale-up-center');
+      }, index * 150); // efecto escalonado
+    });
+    
+    
+  }
 });
 
 
