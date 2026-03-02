@@ -41,4 +41,19 @@ form.addEventListener("submit", function(event) {
   window.open(url, "_blank");
 });
 
+const btnTop = document.getElementById("Arribatop");
 
+if (btnTop) {
+  btnTop.addEventListener("click", irarriba);
+}
+
+function irarriba() {
+  if (typeof fullpage_api !== "undefined") {
+    fullpage_api.moveTo(1);
+  } else {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+}
