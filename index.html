@@ -21,15 +21,18 @@
        <ul class="nav nav-pills justify-content-center  d-none d-md-flex" id="menuTop"> 
           <!-- d-md-flex dnone elemento esta oculto hasta que se ve en md para arriba -->
           <li class="nav-item">
-              <a class="nav-link" href="#contacto">Formulario</a>
+              <a class="nav-link" href="#contacto"  >Formulario</a>
           </li>
           
           <li class="nav-item">
-              <a class="nav-link" href="#planes">Planes</a>
+              <a class="nav-link" href="#planes"  >Planes</a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link" href="#nosotros">Sobre nosotros</a>
+              <a class="nav-link" href="#nosotros" >Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#faqs"  >Preguntas</a>
           </li>
        </ul>
       
@@ -55,13 +58,16 @@
 <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="menuMobile" aria-labelledby="menuMobileLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="menuMobileLabel">Dani fit</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
   </div>
 
-  <div class="offcanvas-body">
-    <a class="nav-link text-white" href="#contacto">Contacto</a>
-    <a class="nav-link text-white" href="#planes">Planes</a>
-    <a class="nav-link text-white" href="#nosotros">Sobre nosotros</a>
+  <div class="offcanvas-body" id="menuMobileLinks">
+    <nav class="nav flex-column">
+      <a href="#contacto" data-menuanchor="contacto" data-bs-dismiss="offcanvas">Contacto</a>
+      <a href="#planes" data-menuanchor="planes" data-bs-dismiss="offcanvas">Planes</a>
+      <a href="#nosotros" data-menuanchor="nosotros" data-bs-dismiss="offcanvas">Sobre nosotros</a>
+      <a href="#faqs" data-menuanchor="faqs" data-bs-dismiss="offcanvas">Preguntas</a>
+    </nav>
   </div>
 </div>
 
@@ -69,7 +75,7 @@
 <main id="content">
   <div id="fullpage">
 
-   <div class="section hero-section d-flex align-items-center justify-content-center text-center" id="section">
+   <div class="section hero-section d-flex align-items-center justify-content-center text-center" id="home">
 
     <div class="hero-content container">
       <h1 class="hero-title">
@@ -253,7 +259,7 @@
                 <li>✅ Ajustes ilimitados</li>
                 <li>✅ Prioridad de respuesta</li>
               </ul>
-              <a href="#sec-contacto" class="btn btn-outline-dark w-100">Elegir Elite</a>
+              <a href="#contacto" class="btn btn-outline-dark w-100">Elegir Elite</a>
             </div>
           </div>
         </div>
@@ -286,7 +292,7 @@
     </div>
   </div>
       
-<div class="section" id="sectionNosotros">
+<div class="section" id="nosotros">
   <div class="container py-5 text-center">
 
     <h2 class="display-5">Sobre Nosotros</h2>
@@ -337,7 +343,7 @@
   </div>
 </div>
  
-      <div class="section" id="nosotros">
+      <div class="section" id="faqs">
        <div class="container"> 
         <div class="accordion">
            <div class="accordion-item">

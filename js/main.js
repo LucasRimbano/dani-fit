@@ -1,45 +1,81 @@
+
+document.addEventListener("DOMContentLoaded", () => {
 new fullpage('#fullpage', {
   autoScrolling: true,
   navigation: true,
   licenseKey: 'gplv3-license',
 
-  fixedElements: '.topbar, footer',
-  paddingTop: '70px',
-  paddingBottom: '120px', // ajustalo al alto del footer en móvil
-
- 
-
-  anchors: ['home', 'contacto', 'planes', 'nosotros'], 
-  menu: '#menuTop' ,
+  anchors: ['home', 'contacto', 'planes', 'nosotros','faqs'], 
+  lockAnchors: true,        
+  recordHistory: false,       
   
-  afterLoad: function(origin, destination, direction) {
+  fixedElements: '.topbar, #footer',
+  paddingTop: '85px',
+  paddingBottom: '120px', 
+  scrollingSpeed: 900,
+  fitToSection: true,
+  fitToSectionDelay: 1600,
 
-    const cards = destination.item.querySelectorAll('.anim-card');
-
-    cards.forEach((card, index) => {
-      card.classList.remove('scale-up-center');
-      void card.offsetWidth; // reinicia animación
-      setTimeout(() => {
-        card.classList.add('scale-up-center');
-      }, index * 150);
-    });
-    
-    
-  }
 });
+ 
+function bindMoveTo(selector){
+  document.querySelectorAll(selector).forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (typeof fullpage_api === "undefined") return;
+      e.preventDefault();
+      const anchor = link.getAttribute('href').replace('#','');
+      fullpage_api.moveTo(anchor);
+    });
+  });
+}
 
+// Desktop navbar
+bindMoveTo('#menuTop a[href^="#"]');
+
+// Mobile offcanvas
+bindMoveTo('#menuMobileLinks a[href^="#"]');
+
+
+  window.addEventListener('load', () => {
+    if (typeof fullpage_api !== "undefined") {
+      fullpage_api.reBuild();
+    }
+  });
+
+  
+  const mobileLinks = document.querySelectorAll('#menuMobileLinks a[href^="#"]');
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+
+      if (typeof fullpage_api === "undefined") return;
+
+      e.preventDefault();
+
+      const anchor = link.getAttribute('href').replace('#', '');
+      fullpage_api.moveTo(anchor);
+
+  
+      const offcanvas = bootstrap.Offcanvas.getInstance(
+        document.getElementById('menuMobile')
+      );
+
+      if (offcanvas) offcanvas.hide();
+
+    });
+  });
 
 
 const form = document.getElementById("formContacto");
+if (form) {
 
-
-form.addEventListener("submit", function(event) {
+  form.addEventListener("submit", function(event) {
   event.preventDefault();
-
-  const nombre = document.getElementById("nombre").value;
-  const email = document.getElementById("email").value;
-  const objetivo = document.getElementById("objetivo").value;
-  const mensaje = document.getElementById("mensaje").value;
+  
+  const nombre = document.getElementById("nombreContacto").value;
+  const email = document.getElementById("emailContacto").value;
+  const objetivo = document.getElementById("objetivoContacto").value;
+  const mensaje = document.getElementById("mensajeContacto").value;
   const terminos = document.getElementById("terminos");
 
     if (!terminos.checked) {
@@ -59,25 +95,22 @@ form.addEventListener("submit", function(event) {
 
   window.open(url, "_blank");
 });
-document.addEventListener("DOMContentLoaded", () => {
+
+  
+
+}
+
 const btnTop = document.getElementById("Arribatop");
 
-if (btnTop) {
-  btnTop.addEventListener("click", irarriba);
-}
-
-function irarriba() {
-  if (typeof fullpage_api !== "undefined") {
-    fullpage_api.moveTo(1);
-  } else {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+  if (btnTop) {
+    btnTop.addEventListener("click", () => {
+      if (typeof fullpage_api !== "undefined") fullpage_api.moveTo('home');
+      else window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
-}
 
-//saco el boton top en menu hamb//
+
+
 
  const offcanvas = document.getElementById("menuMobile");
 
@@ -94,3 +127,5 @@ function irarriba() {
 
   }
 });
+
+
