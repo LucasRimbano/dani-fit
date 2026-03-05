@@ -22,18 +22,18 @@
        <ul class="nav nav-pills justify-content-center  d-none d-md-flex" id="menuTop"> 
           <!-- d-md-flex dnone elemento esta oculto hasta que se ve en md para arriba -->
           <li class="nav-item">
-              <a class="nav-link" href="#contacto"  >Formulario</a>
+              <a class="nav-link" data-menuanchor="contacto" href="#contacto">Contacto</a>
           </li>
           
           <li class="nav-item">
-              <a class="nav-link" href="#planes"  >Planes</a>
+              <a class="nav-link" data-menuanchor="planes" href="#planes">Planes</a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link" href="#nosotros" >Sobre nosotros</a>
+              <a class="nav-link" data-menuanchor="nosotros" href="#nosotros">Nosotros</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#faqs"  >Preguntas</a>
+              <a class="nav-link" data-menuanchor="faqs" href="#faqs">Preguntas frecuentes</a>
           </li>
        </ul>
       
@@ -84,13 +84,13 @@
       </h1>
 
       <p class="hero-subtitle mt-3">
-        Entrenamiento personalizado online y presencial en Buenos Aires.
+        Entrenamiento personalizado online y presencial.
       </p>
 
       <a href="https://wa.me/5491100000000" 
          target="_blank" 
          class="btn btn-light  btn-outline-warning btn-lg mt-4 hero-btn">
-        EMPEZÁ HOY
+        EMPIEZA HOY
       </a>
 
       <div class="scroll-indicator mt-5">
@@ -103,9 +103,9 @@
       <div class="container py-4">
 
         <div class="text-center mb-4">
-          <h2 class="animate__animated animate__slideInDown fw-bold text-primary mb-2">🏋️ Transformá tu cuerpo, transformá tu vida</h2>
+          <h2 class="animate__animated animate__slideInDown fw-bold text-primary mb-2">🏋️ Transforma tu cuerpo, transforma tu vida</h2>
           <p class="text-muted  mb-0">
-            Entrenamientos personalizados diseñados para vos. Elegí tu plan y empezá hoy.
+            Entrenamientos personalizados diseñados para ti. Elege tu plan y empieza hoy.
           </p>
         </div>
 
@@ -126,7 +126,7 @@
                   🔥 PLAN DESTACADO
                 </span>
 
-                <h3 class="fw-bold mb-4">Entrená con método</h3>
+                <h3 class="fw-bold mb-4">Entrena con método</h3>
 
                 <p class="mb-3 opacity-75">
                   Rutinas personalizadas con progresión real, seguimiento constante y resultados medibles.
@@ -173,7 +173,7 @@
 
                   <div class="mb-3">
                     <label for="mensajeContacto" class="form-label fw-semibold">Mensaje</label>
-                    <textarea class="form-control" id="mensajeContacto" rows="4" placeholder="Contame un poco sobre vos..." required></textarea>
+                    <textarea class="form-control" id="mensajeContacto" rows="4" placeholder="Contame un poco sobre ti..." required></textarea>
                   </div>
 
                   <div class="form-check mb-3">
@@ -202,7 +202,7 @@
       
       <div class="text-center mb-4">
         <h2 class="fw-bold fs-2">Planes de entrenamiento</h2>
-        <p class="text-muted mb-2 fs-4">Elegí el plan ideal según tu objetivo. Rutinas adaptadas, seguimiento y progreso real.</p>
+        <p class="text-muted mb-2 fs-4">Elege el plan ideal según tu objetivo. Rutinas adaptadas, seguimiento y progreso real.</p>
       
       </div>
 
@@ -212,8 +212,8 @@
           <div class="card plan-card h-100 border-0 shadow-sm rounded-4">
             <div class="card-body p-4">
               <h5 class="fw-bold animate__animated animate__fadeInUp animate__faster mb-1">Starter</h5>
-              <p class="text-muted small">Ideal para arrancar</p>
-              <div class="precio-plan display-6 fw-bold mb-3">Desde $XX</div>
+              <p class="text-muted small">Ideal para empezar</p>
+              <div class="precio-plan display-6 fw-bold mb-3">Desde $XX MXN</div>
               <ul class="list-unstyled mb-4 plan-features">
                 <li>✅ Rutina personalizada</li>
                 <li>✅ Ajuste mensual</li>
@@ -234,7 +234,7 @@
                 <span class="badge text-bg-primary">Más elegido</span>
               </div>
               <p class="text-muted small">El mejor balance</p>
-              <div class="display-6 fw-bold mb-3">Desde $XX</div>
+              <div class="display-6 fw-bold mb-3">Desde $XX MXN</div>
               <ul class="list-unstyled mb-4">
                 <li>✅ Rutina + progresión semanal</li>
                 <li>✅ Correcciones y ajustes</li>
@@ -252,7 +252,7 @@
             <div class="card-body p-4">
               <h5 class="fw-bold mb-1 anim-card">Elite</h5>
               <p class="text-muted small">Acompañamiento completo</p>
-              <div class="display-6 fw-bold mb-3">Desde $XX</div>
+              <div class="display-6 fw-bold mb-3">Desde $XX MXN</div>
               <ul class="list-unstyled mb-4">
                 <li>✅ Seguimiento intensivo</li>
                 <li>✅ Planes por etapas</li>
@@ -349,13 +349,13 @@
         <div class="accordion">
            <div class="accordion-item">
               <h2 class="accordion-header" id="faqsH2">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Que tipo de asistencia damos</button>
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Que tipo de asistencia ofrecemos?</button>
               </h2>
 
            </div>
            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                 <strong>Hacemos asistencias profesionales para tu dia a daia tu entrenamiento personalizado</strong> 
+                 <strong>Te acompañamos con asesoría profesional para tu entrenamiento personalizado.</strong> 
               </div>
 
            </div>
@@ -370,7 +370,7 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>Contáctanos para conocer nuestros planes y promociones especiales.</strong>
+              <strong>Contáctanos para conocer precios y promociones vigentes..</strong>
             </div>
           </div>
         </div>
@@ -379,11 +379,12 @@
         <div class="accordion">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Tu pregunta aquí</button>
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">  ¿Necesito experiencia previa para comenzar?</button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>Tu respuesta aquí</strong>
+                <strong> Los planes se adaptan a tu nivel actual, ya seas principiante o tengas experiencia entrenando. 
+                          Analizamos tu objetivo, tu condición física y diseñamos un plan progresivo para que avances de forma segura.</strong>
               </div>
             </div>
           </div>

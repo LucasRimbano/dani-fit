@@ -417,7 +417,24 @@ body { font-family: Arial, sans-serif; }
   40%  { transform: scale(1.08); }
   100% { transform: scale(1); }
 }
+.nav-pills .nav-link {
+  border-radius: 10px;
+  padding: 8px 18px;
+  margin: 0 4px;
+  transition: 0.3s;
+}
 
+.nav-pills .nav-link.active {
+ background-color: rgba(255, 255, 255, 0.15);
+  color: black;
+  font-weight: 600;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: rgba(13,110,253,0.2); 
+  color: #edf0f5e3;
+  transform: translateY(-2px);
+}
 @media (max-width: 768px){
   #footer small,
   #footer .small{

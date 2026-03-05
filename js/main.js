@@ -4,8 +4,10 @@ new fullpage('#fullpage', {
   autoScrolling: true,
   navigation: true,
   licenseKey: 'gplv3-license',
+  
 
   anchors: ['home', 'contacto', 'planes', 'nosotros','faqs'], 
+  menu: '#menuTop',
   lockAnchors: true,        
   recordHistory: false,       
   
