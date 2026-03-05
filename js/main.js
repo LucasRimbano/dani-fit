@@ -16,7 +16,29 @@ new fullpage('#fullpage', {
   fitToSection: true,
   fitToSectionDelay: 1600,
 
+  afterLoad: function(origin, destination){
+  const items = destination.item.querySelectorAll(".anim-card");
+  console.log("afterLoad:", destination.anchor, "anim:", items.length);
+
+  items.forEach((el, i) => {
+    el.classList.remove("scale-up-center");
+    void el.offsetWidth;
+    setTimeout(() => el.classList.add("scale-up-center"), i * 140);
+  });
+
+   const anims = destination.item.querySelectorAll(".animate__animated");
+
+  anims.forEach((el)=>{
+    el.style.visibility = "visible";
+    el.classList.remove("animate__slideInDown");
+    void el.offsetWidth;
+    el.classList.add("animate__slideInDown");
+  });
+
+}
+
 });
+
  
 function bindMoveTo(selector){
   document.querySelectorAll(selector).forEach(link => {
@@ -126,6 +148,16 @@ const btnTop = document.getElementById("Arribatop");
     });
 
   }
+
+
+  const logo = document.getElementById("logoDani");
+
+setInterval(() => {
+  logo.classList.remove("logo-pulse");
+  void logo.offsetWidth; // reinicia la animación
+  logo.classList.add("logo-pulse");
+}, 15000); 
+
 });
 
 

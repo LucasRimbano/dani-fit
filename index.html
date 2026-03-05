@@ -9,6 +9,7 @@
   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -37,7 +38,7 @@
        </ul>
       
       <div class="logo-center">
-        <img src="logo.png" alt="Logo Dani Fit"
+        <img src="logo.png" alt="Logo Dani Fit" id="logoDani"
             class="img-fluid"
             style="max-width: 125px;">
       </div>
@@ -78,7 +79,7 @@
    <div class="section hero-section d-flex align-items-center justify-content-center text-center" id="home">
 
     <div class="hero-content container">
-      <h1 class="hero-title">
+      <h1 class="hero-title anim-card">
         TRANSFORMÁ TU <span class="highlight">CUERPO</span>
       </h1>
 
@@ -103,7 +104,7 @@
 
         <div class="text-center mb-4">
           <h2 class="animate__animated animate__slideInDown fw-bold text-primary mb-2">🏋️ Transformá tu cuerpo, transformá tu vida</h2>
-          <p class="text-muted mb-0">
+          <p class="text-muted  mb-0">
             Entrenamientos personalizados diseñados para vos. Elegí tu plan y empezá hoy.
           </p>
         </div>
@@ -118,14 +119,14 @@
                 <img src="gym-2.jpg" class="card-img w-100 h-100 img-cover" alt="Entrenamiento Dani Fit">
               </div>
 
-              <div class="card-img-overlay d-flex flex-column justify-content-end p-4"
-                  style="background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.88) 100%);">
+              <div class="card-img-overlay overlay-pro d-flex flex-column justify-content-end p-4"
+                  style="background: linear-gradient(180deg, rgba(27, 77, 134, 0.15) 0%, rgba(18, 86, 150, 0.88) 100%);">
 
                 <span class="badge bg-warning text-dark fw-bold mb-3 align-self-start">
                   🔥 PLAN DESTACADO
                 </span>
 
-                <h3 class="fw-bold mb-2">Entrená con método</h3>
+                <h3 class="fw-bold mb-4">Entrená con método</h3>
 
                 <p class="mb-3 opacity-75">
                   Rutinas personalizadas con progresión real, seguimiento constante y resultados medibles.
@@ -146,7 +147,7 @@
             <div class="card h-100 shadow-lg border-0 rounded-4">
               <div class="card-body p-4">
 
-                <h2 class="text-center fw-bold mb-4 text-uppercase">💪 Contacto Dani Fit</h2>
+                <h2 class="text-center fw-bold mb-4 text-uppercase titulo-contacto">💪 Contacto Dani Fit</h2>
 
                 <form id="formContacto">
                   <div class="mb-3">
@@ -181,7 +182,7 @@
                   </div>
 
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-dark btn-lg fw-bold" id="btnEnviar">
+                    <button type="submit" class="btn btn-contacto btn-lg fw-bold" id="btnEnviar">
                       🚀 Enviar mensaje
                     </button>
                   </div>
@@ -208,12 +209,12 @@
     
       <div class="row g-4 align-items-stretch fs-4">
         <div class="col-12 col-md-4">
-          <div class="card plan-card h-100">
+          <div class="card plan-card h-100 border-0 shadow-sm rounded-4">
             <div class="card-body p-4">
-              <h5 class="fw-bold mb-1">Starter</h5>
+              <h5 class="fw-bold animate__animated animate__fadeInUp animate__faster mb-1">Starter</h5>
               <p class="text-muted small">Ideal para arrancar</p>
-              <div class="display-6 fw-bold mb-3">Desde $XX</div>
-              <ul class="list-unstyled mb-4">
+              <div class="precio-plan display-6 fw-bold mb-3">Desde $XX</div>
+              <ul class="list-unstyled mb-4 plan-features">
                 <li>✅ Rutina personalizada</li>
                 <li>✅ Ajuste mensual</li>
                 <li>✅ Guía de técnica básica</li>
@@ -226,7 +227,7 @@
         </div>
 
         <div class="col-12 col-md-4 fs-4">
-          <div class="card h-100  shadow-lg border-0">
+          <div class="card h-100  plan-card anim-card border-0 shadow-sm rounded-4">
             <div class="card-body  p-4">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h5 class="fw-bold  anim-card mb-0">Pro</h5>
@@ -247,9 +248,9 @@
         </div>
 
         <div class="col-12 col-md-4">
-          <div class="card h-100 shadow-sm border-0">
+          <div class="card h-100 plan-card border-0 shadow-sm rounded-4">
             <div class="card-body p-4">
-              <h5 class="fw-bold mb-1">Elite</h5>
+              <h5 class="fw-bold mb-1 anim-card">Elite</h5>
               <p class="text-muted small">Acompañamiento completo</p>
               <div class="display-6 fw-bold mb-3">Desde $XX</div>
               <ul class="list-unstyled mb-4">

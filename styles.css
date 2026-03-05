@@ -338,7 +338,85 @@ body { font-family: Arial, sans-serif; }
   transform: scale(0.95);
 }
 
+.img-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.card-pro{
+  transition: transform .35s ease, box-shadow .35s ease;
+  cursor: pointer;
+}
 
+
+.card-pro:hover{
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 25px 60px rgba(0,0,0,.45);
+}
+
+
+.card-pro img{
+  transition: transform .6s ease;
+}
+
+.card-pro:hover img{
+  transform: scale(1.08);
+}
+
+
+.card-pro .btn{
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.card-pro:hover .btn{
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.titulo-contacto{
+  color:#3a6ea5;
+  letter-spacing:1px;
+}
+
+#formContacto .form-control,
+#formContacto .form-select{
+  border: 1px solid #f2b6d491;
+}
+
+#formContacto .form-control:focus,
+#formContacto .form-select:focus{
+
+  box-shadow: 0 0 0 0.25rem rgba(231, 84, 165, 0.144);
+}
+.btn-contacto{
+  background: linear-gradient(135deg,#cf9fb36e,#e754a562);
+  border: none;
+  color: white;
+  transition: all .25s ease;
+}
+
+.btn-contacto:hover{
+  background: linear-gradient(135deg,#ff6eb0,#f062b2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(231,84,166,.4);
+}
+
+.btn-contacto:active{
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(231,84,166,.3);
+}
+
+.logo-pulse{
+  animation: logo-pulse .6s ease;
+}
+
+@keyframes logo-pulse{
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
 
 @media (max-width: 768px){
   #footer small,
