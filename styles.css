@@ -393,7 +393,6 @@ body { font-family: Arial, sans-serif; }
 .btn-contacto{
   background: linear-gradient(135deg,#cf9fb36e,#e754a562);
   border: none;
-  color: white;
   transition: all .25s ease;
 }
 
@@ -477,6 +476,28 @@ body { font-family: Arial, sans-serif; }
 }
 .whatsapp-btn{
   animation: pulse 2s infinite;
+}
+
+
+.plan-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-lg);
+}
+.plan-card::before{
+  content:"";
+  display:block;
+  height:4px;
+  width:100%;
+  background:linear-gradient(135deg,#2a3642,#6B8CA8,#d8a3b6);
+  border-radius:var(--r1) var(--r1) 0 0;
+}
+
+i.bi.bi-youtube {
+    margin-right: 5px;
+}
+.parrafo {
+
+  margin-right: 5px;
 }
 
 @keyframes pulse{
